@@ -4,10 +4,11 @@
 }
 
 body{
-    font-family: "Custom_font", "Consolas", "Times New Roman";
+    font-family: "Custom_font", "Consolas", "Times New Roman";     
     margin: 0;
 }
 header{    
+    overflow-wrap: break-word;   
     background-color: #171C30;
     padding: 20px;
 }
@@ -27,11 +28,12 @@ header{
     padding-left: 10px;
 }
 
-main{
+main{      
     display: flex;   
 }
-.all_info {        
-    max-width: 80%;
+.all_info {  
+    overflow-wrap: break-word;      
+    width: 80%;  
     display: flex;
     flex-direction: column;
 }
@@ -39,8 +41,11 @@ main{
     display: flex;      
 }
 
-article{        
+article{          
+    max-width: 478px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
     background-color: #242E49;                                           
 }
 .justice-map{     
@@ -51,7 +56,7 @@ article{
 .justice-map img:hover{    
     box-shadow: 3px 3px 10px white;    
 }
-.sentence{
+.sentence{    
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -86,10 +91,6 @@ section{
 section div{    
     padding-inline: 10%;     
 }
-.comic-page{       
-    border: 2px solid black;
-    width: 100%;    
-}
 .floating-image-left{
     width: 200px;
     float: left; 
@@ -101,6 +102,10 @@ section div{
     float: right; 
     margin-left: 20px;
     margin-bottom: 10px;
+}
+.comic-page{       
+    border: 2px solid black;
+    width: 100%;    
 }
 .character{
     margin-top: 5%;
@@ -134,7 +139,7 @@ aside a{
     color: white;
 }
 
-.menu{
+.menu{   
     background-color: #242E49;
     width: 20%;
 }
@@ -149,7 +154,8 @@ nav{
     position: sticky;
     top: 0;   
 }
-nav a{           
+nav a{       
+    overflow: hidden;    
     padding: 15px;
     border-radius: 15px;
     padding-left: 5%;       
@@ -198,7 +204,10 @@ footer{
 @media screen and (max-width: 960px){
     .main_info{
         flex-direction: column;
-    }                   
+    }           
+    article{
+        max-width: none;
+    }        
     .character{        
         text-align: center;
     }
@@ -217,7 +226,10 @@ footer{
     }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 500px){   
+    .floating-image-left, .floating-image-right{
+        width: 100%;
+    }  
     .justice-map{
         position: relative;
     }
