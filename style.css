@@ -12,7 +12,8 @@ header{
     background-color: #171C30;
     padding: 20px;
 }
-.header-title{   
+.header-title{  
+    max-width: 50%; 
     color: #e7db34;     
     display: inline-block;
     text-align: right;
@@ -182,12 +183,13 @@ nav .current::before{
 }
 
 footer{        
-    overflow-wrap: break-word;
+    overflow-wrap: break-word; 
     clear: both;
     background-color: #171C30;
     padding: 20px;
 }
 .footer-title{   
+    max-width: 50%;
     color: #e7db34;     
     display: inline-block;      
     box-shadow: 5px -5px 5px rgb(232, 232, 114);
@@ -205,7 +207,10 @@ footer{
 @media screen and (max-width: 960px){
     .main_info{
         flex-direction: column;
-    }           
+    }   
+    .header-title{
+        max-width: 100%;
+    }        
     article{
         max-width: none;
     }        
@@ -225,6 +230,9 @@ footer{
     nav .current:hover::before{
     content: none;    
     }
+    .footer-title{
+        max-width: 100%;
+    }
 }
 
 @media screen and (max-width: 500px){   
@@ -238,4 +246,3 @@ footer{
         margin-top: 208px;
     }
 }
-
