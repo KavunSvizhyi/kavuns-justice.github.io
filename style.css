@@ -236,6 +236,9 @@ footer{
 }
 
 @media screen and (max-width: 500px){   
+    body{
+        min-width: 478px;
+    }
     .floating-image-left, .floating-image-right{
         width: 100%;
     }  
@@ -246,3 +249,4 @@ footer{
         margin-top: 208px;
     }
 }
+
