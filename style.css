@@ -7,10 +7,14 @@ body{
     font-family: "Custom_font", "Consolas", "Times New Roman";     
     margin: 0;
 }
-header{    
+header, footer{     
     overflow-wrap: break-word;   
     background-color: #171C30;
     padding: 20px;
+}
+header img{    
+    float: right;
+    width: 100px;      
 }
 .header-title{  
     max-width: 50%; 
@@ -24,7 +28,7 @@ header{
     margin-top: 1%;
     margin-bottom: 1%;
 }
-.header-title h1{
+.header-title h1, .footer-title h1{
     padding-right: 10px;
     padding-left: 10px;
 }
@@ -38,7 +42,7 @@ main{
     display: flex;
     flex-direction: column;
 }
-.main_info {    
+.main_info {        
     display: flex;      
 }
 
@@ -182,11 +186,13 @@ nav .current::before{
     content: "※ ";    
 }
 
-footer{        
-    overflow-wrap: break-word; 
-    clear: both;
-    background-color: #171C30;
-    padding: 20px;
+footer{         
+    clear: both; 
+}
+footer span{
+    color: #e7db34;
+    font-size: xx-small;
+    float: right;
 }
 .footer-title{   
     max-width: 50%;
@@ -199,17 +205,13 @@ footer{
     margin-top: 1%;
     margin-bottom: 1%;
 }
-.footer-title h1{
-    padding-left: 10px;
-    padding-right: 10px;
-}
 
 @media screen and (max-width: 960px){
     .main_info{
         flex-direction: column;
     }   
     .header-title{
-        max-width: 100%;
+        max-width: 70%;
     }        
     article{
         max-width: none;
@@ -249,4 +251,3 @@ footer{
         margin-top: 208px;
     }
 }
-
